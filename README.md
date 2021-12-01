@@ -10,8 +10,7 @@ This model already contains .hoc files necessary to run the model and additional
 Further information about the cell dynamics can be found in [aberra2018biophysically].
 
 ## Software requirements 
-The data were generated using NEURON environement 7.8.1  You can download this software here https://neuron.yale.edu/neuron/. A supercomputer was used, however, depending on the length of simulation, it is possible to use a regular desktop or laptop. For the analysis of the data, a custom matlab code was used. You can download this software here https://www.mathworks.com.
-
+The data were generated using NEURON environement 7.8.1  You can download this software here https://neuron.yale.edu/neuron/. For the analysis of the data, a custom matlab code was used. 
 
 ## Data analysis
 NB: due to the large amount of data, the files for all neurons are not available on github. All the files required for the analysis are however available.
