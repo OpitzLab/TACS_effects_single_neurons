@@ -18,7 +18,7 @@ For the analysis of the data, a custom matlab code was used.
 
 
 ## Reference
-Please use the following reference: Tran et al., 2020. Effects of transcranial alternating current stimulation on spiking activity in computational models of single neocortical neurons. BioRxiv
+Please use the following reference: Tran et al. 2020. Effects of transcranial alternating current stimulation on spiking activity in computational models of single neocortical neurons. BioRxiv.
 
 ## License
 The HOC code, Python code, synapse MOD code and cell morphology are licensed with the above mentioned CC-BY-NC-SA license.
