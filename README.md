@@ -10,11 +10,12 @@ This model already contains .hoc files necessary to run the model and additional
 Further information about the cell dynamics can be found in [aberra2018biophysically].
 
 ## Software requirements 
-The data were generated using NEURON environement 7.8.1  You can download this software here https://neuron.yale.edu/neuron/. For the analysis of the data, a custom matlab code was used. 
+The data were generated using NEURON environement 7.8.1  You can download this software here https://neuron.yale.edu/neuron/. 
 
 ## Data analysis
-NB: due to the large amount of data, the files for all neurons are not available on github. All the files required for the analysis are however available.
-Data were analyzed with a custom Matlab code.
+NB: due to the large amount of data, the files for all neurons are not available on github. 
+For the analysis of the data, a custom matlab code was used. 
+
 
 ## Reference
 Please use the following reference: Tran et al., 2020. Effects of transcranial alternating current stimulation on spiking activity in computational models of single neocortical neurons. BioRxiv
