@@ -2,7 +2,7 @@
 
 
 
-These folders contain the data set for of 25 neocortical cells with various dynamics (Each folder is independent of each other). Here, we investigated the effects of tACS amplitudes on computational models of single neocortical neurons. 
+These folders contain the data set for of 25 neocortical cells with various dynamics (each folder is independent of each other). Here, we investigated the effects of tACS amplitudes on computational models of single neocortical neurons. 
 
 ## Information about the neocortical cells used
 A set of 25 neocortical cells was modified and used in this investigation and can be downloaded from ModelDB (click on this link https://senselab.med.yale.edu/ModelDB/default accession number: 066023 or directly click on this link https://senselab.med.yale.edu/modeldb/ShowModel?model=241165#tabs-1). 
