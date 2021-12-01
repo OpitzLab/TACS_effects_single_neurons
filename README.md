@@ -25,4 +25,5 @@ The HOC code, Python code, synapse MOD code and cell morphology are licensed wit
 
 ## Correspondence
 htran - at- umn.edu (Harry Tran)
+
 aopitz -at- umn.edu (Alex Opitz)
