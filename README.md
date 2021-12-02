@@ -9,8 +9,9 @@ A set of 25 neocortical cells was modified and used in this investigation and ca
 This model already contains .hoc files necessary to run the model and additional and/or modified .hoc files can be found in the NEURON_code folder.
 Further information about the cell dynamics can be found in [aberra2018biophysically].
 
-## Software requirements 
+## Software requirements and instructions
 The data were generated using NEURON environement 7.8.1  You can download this software here https://neuron.yale.edu/neuron/. 
+Assuming NEURON has been installed, the MOD files in the 'mechanims/' folder need to be compiled using mknrndll. Copy then nrnmech.dll from 'mechanims/' up one level to the main folder.
 
 ## Data analysis
 NB: due to the large amount of data, the files for all neurons are not available on github. 
