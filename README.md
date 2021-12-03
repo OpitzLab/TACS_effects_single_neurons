@@ -6,7 +6,6 @@ These folders contain the data set for of 25 neocortical cells with various dyna
 
 ## Information about the neocortical cells used
 Models in this study are based on the models in https://senselab.med.yale.edu/modeldb/ShowModel?model=241165
-This model already contains .hoc files necessary to run the model and additional and/or modified .hoc files can be found in the NEURON_code folder.
 Further information about the cell dynamics can be found in [aberra2018biophysically].
 
 ## Software requirements and instructions
