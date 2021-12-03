@@ -1,0 +1,7 @@
+/* 
+* Loads model files and creates GUI panels. Includes procedure for generating shape plots of cells
+* AUTHOR: Aman Aberra, Duke University
+* CONTACT: aman.aberra@duke.edu
+*/
+
+{load_file("nrngui.hoc")}

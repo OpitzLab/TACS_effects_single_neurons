@@ -1,0 +1,100 @@
+objref savt, savtacs, recv, savv, savspike, spike_v, spike_t, AP_x, AP_y, AP_z, sav_AP_site
+
+proc run_APsite_save(){
+
+	spike_length = 2.5 // in ms
+	
+	AP_x = new Vector()
+	AP_y = new Vector()
+	AP_z = new Vector()
+	spike_t = new Vector()
+	spike_v = new Matrix(neuron_section_size, spike_length/dt) // record 2ms of action potential over the whole neuron
+	recv = new Vector()
+	recv.record(&cell.soma.v(0.5)) // record v in a vector
+	
+	spike_timer = 0
+	spike_counter = 0
+	stdinit()
+	while (t < tstop-dt/2) {
+		fadvance()
+		if (spike_timer == 0) {
+			forsec cell.somatic { // check for AP initiation in soma
+				if (v(0.5) > 0) {
+					spike_timer = 1
+					spike_counter += 1
+					spike_t.append(t)
+					AP_x.append(x_xtra(0.5))
+					AP_y.append(y_xtra(0.5))
+					AP_z.append(z_xtra(0.5))
+					break
+				}
+			}
+		}
+		if (spike_timer == 0) {
+			forsec cell.axonal { // check for AP initiation in axon
+				if (v(0.5) > 0) {
+					spike_timer = 1
+					spike_counter += 1
+					spike_t.append(t)
+					AP_x.append(x_xtra(0.5))
+					AP_y.append(y_xtra(0.5))
+					AP_z.append(z_xtra(0.5))
+					break
+				}
+			}
+		}
+		if (spike_timer > 0 && spike_timer < (spike_length/dt+1)) {
+			section_idx = 0
+			forsec cell.all {
+				spike_v.x[section_idx][spike_timer-1] = v(0.5)
+				section_idx += 1
+			}
+			spike_timer += 1
+			if (spike_timer == (spike_length/dt+1)) {
+				spike_timer = 0
+
+				//savspike = new File()
+				//sprint(s,"./results/%s/spike_%d.txt",result_folder_name,spike_counter)
+				//savspike.wopen(s)
+				//spike_v.fprint(savspike)
+				//savspike.close()
+			}
+		}
+	}
+	
+
+	savv = new File()
+	savt = new File()
+	savtacs = new File()
+	
+	sprint(s,"./results/%s/somaV.txt",result_folder_name)
+	savv.wopen(s)
+	sprint(s,"./results/%s/t.txt",result_folder_name)
+	savt.wopen(s)
+	sprint(s,"./results/%s/TACS.txt",result_folder_name)
+	savtacs.wopen(s)
+	
+	stim_time.printf(savt,"%.3f\n")
+	stim_amp.printf(savtacs)
+	recv.printf(savv)
+	
+	savt.close()
+	savtacs.close()
+	savv.close()
+	
+	savt = new File()
+	sprint(s,"./results/%s/spike_t.txt",result_folder_name)
+	savt.wopen(s)
+	spike_t.printf(savt,"%.3f\n")
+	savt.close()
+	
+	sav_AP_site = new File()
+	sprint(s,"./results/%s/AP_site.txt",result_folder_name)
+	sav_AP_site.wopen(s)
+	
+	for i=0,AP_x.size()-1 {
+		sav_AP_site.printf("%.4f %.4f %.4f\n", AP_x.x(i), AP_y.x(i), AP_z.x(i))
+	}
+	
+	sav_AP_site.close()
+}

@@ -1,0 +1,93 @@
+//objref midSecX, midSecY, midSecZ
+strdef s
+
+proc exportLocs(){ localobj savLocs, sref
+    // all locs
+
+    neuron_section_size = 0
+
+    savLocs = new File()
+	sprint(s,"./results/%s/locs_all.txt",result_folder_name)
+	savLocs.wopen(s)
+
+	forsec cell.all{
+        sref = new SectionRef()
+        if (!sref.has_parent) {
+            savLocs.printf("%.4f %.4f %.4f nan nan nan\n", x_xtra(0.5), y_xtra(0.5), z_xtra(0.5))
+        } else{
+            savLocs.printf("%.4f %.4f %.4f ", x_xtra(0.5), y_xtra(0.5), z_xtra(0.5))
+            sref.parent { savLocs.printf("%.4f %.4f %.4f \n", x_xtra(0.5), y_xtra(0.5), z_xtra(0.5)) }
+        }
+        neuron_section_size += 1
+	}
+	
+	savLocs.close()
+
+	// soma locs
+    savLocs = new File()
+	sprint(s,"./results/%s/locs_somatic.txt",result_folder_name)
+	savLocs.wopen(s)
+
+	forsec cell.somatic{
+        sref = new SectionRef()
+        if (!sref.has_parent) {
+            savLocs.printf("%.4f %.4f %.4f nan nan nan\n", x_xtra(0.5), y_xtra(0.5), z_xtra(0.5))
+        } else{
+            savLocs.printf("%.4f %.4f %.4f ", x_xtra(0.5), y_xtra(0.5), z_xtra(0.5))
+            sref.parent { savLocs.printf("%.4f %.4f %.4f \n", x_xtra(0.5), y_xtra(0.5), z_xtra(0.5)) }
+        }
+	}
+
+	savLocs.close()
+
+	// apical locs
+    savLocs = new File()
+	sprint(s,"./results/%s/locs_apical.txt",result_folder_name)
+	savLocs.wopen(s)
+
+	forsec cell.apical{
+        sref = new SectionRef()
+        if (!sref.has_parent) {
+            savLocs.printf("%.4f %.4f %.4f nan nan nan\n", x_xtra(0.5), y_xtra(0.5), z_xtra(0.5))
+        } else{
+            savLocs.printf("%.4f %.4f %.4f ", x_xtra(0.5), y_xtra(0.5), z_xtra(0.5))
+            sref.parent { savLocs.printf("%.4f %.4f %.4f \n", x_xtra(0.5), y_xtra(0.5), z_xtra(0.5)) }
+        }
+	}
+	
+	savLocs.close()
+	
+	// basal locs
+	savLocs = new File()
+	sprint(s,"./results/%s/locs_basal.txt",result_folder_name)
+	savLocs.wopen(s)
+
+	forsec cell.basal{
+        sref = new SectionRef()
+        if (!sref.has_parent) {
+            savLocs.printf("%.4f %.4f %.4f nan nan nan\n", x_xtra(0.5), y_xtra(0.5), z_xtra(0.5))
+        } else{
+            savLocs.printf("%.4f %.4f %.4f ", x_xtra(0.5), y_xtra(0.5), z_xtra(0.5))
+            sref.parent { savLocs.printf("%.4f %.4f %.4f \n", x_xtra(0.5), y_xtra(0.5), z_xtra(0.5)) }
+        }
+	}
+	
+	savLocs.close()
+	
+	// axonal locs
+    savLocs = new File()
+	sprint(s,"./results/%s/locs_axonal.txt",result_folder_name)
+	savLocs.wopen(s)
+
+	forsec cell.axonal{
+        sref = new SectionRef()
+        if (!sref.has_parent) {
+            savLocs.printf("%.4f %.4f %.4f nan nan nan\n", x_xtra(0.5), y_xtra(0.5), z_xtra(0.5))
+        } else{
+            savLocs.printf("%.4f %.4f %.4f ", x_xtra(0.5), y_xtra(0.5), z_xtra(0.5))
+            sref.parent { savLocs.printf("%.4f %.4f %.4f \n", x_xtra(0.5), y_xtra(0.5), z_xtra(0.5)) }
+        }
+	}
+	
+	savLocs.close()
+}
