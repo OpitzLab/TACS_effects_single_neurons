@@ -1,0 +1,27 @@
+objref spikesource1, synapse1, connection1
+
+proc mySynapse() {
+	if (Synapse_on == 1) {
+	//objref spikesource1
+	spikesource1 = new NetStim(0.5) // Location of NetStim is arbitrary
+	spikesource1.interval = 1000/50 // ms (mean) time between spikes
+	spikesource1.number = 100000000000 // (average) number of spikes
+	spikesource1.start = 0 // ms (mean) start time of first spike
+	spikesource1.noise = 1 // range 0 to 1. Fractional randomness
+							// 0 deterministic, 1 intervals have decaying
+							// exponential distribution
+	spikesource1.seed(1)
+	
+	//objref synapse1
+	cell.apic[5] synapse1 = new Exp2Syn(0.5) // Inserts ExpSyn in the middle of soma
+	synapse1.tau1 = 2 // ms rise tisme
+	synapse1.tau2 = 10 // ms decay time
+	synapse1.e = 0 // mV reversal potential
+	
+	//objref connection1
+	thresh = 10
+	delay = 0
+	weight = 0.004
+	connection1 = new NetCon(spikesource1, synapse1, thresh, delay, weight)
+	}
+}	
