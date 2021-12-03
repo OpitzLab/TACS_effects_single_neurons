@@ -1,0 +1,25 @@
+//strdef result_folder
+//sprint(result_folder, "test") // Results folder name
+
+//Blue Brain cell index   
+my_cell_type = 25   
+plot_neuron = 0   
+   
+Synapse_on = 1   
+   
+STIM_TYPE = 1 // TACS: 1, TMS: 2   
+//TMS_TYPE = TYPENUM // Biphasic: 1, Monophasic: 2   
+// Stim timing   
+DEL = 120000 // ms - delay to first phase   
+DUR = 2*DEL // ms - duration of stimulation   
+AMP = 0  // V/m - amplitude of stimulation   
+FREQ = 10 // Hz - frequency of the TACS stimulation   
+   
+tstop = 4*DEL   
+   
+// uniform E field stimulation   
+//theta = 180 // deg - polar angle   
+//phi = 0 // deg - azimuthal angle   
+EX = 0   
+EY = -1   
+EZ = 0   
