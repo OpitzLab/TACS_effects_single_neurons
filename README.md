@@ -9,7 +9,7 @@ Models in this study are based on the models in https://senselab.med.yale.edu/mo
 Further information about the cell dynamics can be found in [aberra2018biophysically].
 
 ## Software requirements and instructions
-The data were generated using NEURON environement 7.8.1  You can download this software here https://neuron.yale.edu/neuron/. 
+The data were generated using NEURON environement 7.8.1.  You can download this software here https://neuron.yale.edu/neuron/. 
 Assuming NEURON has been installed, the MOD files in the 'mechanisms/' folder need to be compiled using mknrndll. Copy then nrnmech.dll from 'mechanisms/' up one level to the main folder.
 
 ## Reference
