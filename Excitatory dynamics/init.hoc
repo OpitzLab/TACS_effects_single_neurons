@@ -74,7 +74,7 @@ AMP = 0.5 // units: mV/mm
 t0 = startsw()
 cell_chooser(my_cell_type) 
 
-chdir("F:/ModelDB_folder/Excitatory dynamics") // change here path
+chdir("F:/ModelDB_folder/Excitatory dynamics") // ------------------------ CHANGE YOUR PATH HERE
 sprint(s, "\"mkdir amp_%0.2f_cell_%0.1d\"",AMP, my_cell_type)    	
 system(s)
 sprint(s, "amp_%0.2f_cell_%0.1d",AMP, my_cell_type)   
