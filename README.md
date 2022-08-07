@@ -10,6 +10,7 @@ Models in this study are based on the human models in https://senselab.med.yale.
 ## Software requirements and instructions
 The data were generated using NEURON environement 7.8.1.  You can download this software here https://neuron.yale.edu/neuron/. 
 Assuming NEURON has been installed, the MOD files in the 'mechanisms/' folder need to be compiled using mknrndll. Copy then nrnmech.dll from 'mechanisms/' up one level to the main folder.
+In the main file "init.hoc", do not forget to modify the path of the working directory.
 
 ## Reference
 Please use the following reference: Tran et al. 2020. Effects of transcranial alternating current stimulation on spiking activity in computational models of single neocortical neurons. BioRxiv.
