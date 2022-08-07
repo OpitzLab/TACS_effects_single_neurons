@@ -1,6 +1,3 @@
-//strdef result_folder_name
-//sprint(result_folder_name, "test") // Results folder name
-
 //Blue Brain cell index   
 my_cell_type = 25   
 plot_neuron = 0   
