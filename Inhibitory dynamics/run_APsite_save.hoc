@@ -67,11 +67,11 @@ proc run_APsite_save(){
 	savt = new File()
 	savtacs = new File()
 	
-	sprint(s,"./results/%s/somaV.txt",result_folder_name)
+	sprint(s,"somaV.txt")
 	savv.wopen(s)
-	sprint(s,"./results/%s/t.txt",result_folder_name)
+	sprint(s,"t.txt")
 	savt.wopen(s)
-	sprint(s,"./results/%s/TACS.txt",result_folder_name)
+	sprint(s,"TACS.txt")
 	savtacs.wopen(s)
 	
 	stim_time.printf(savt,"%.3f\n")
@@ -83,13 +83,13 @@ proc run_APsite_save(){
 	savv.close()
 	
 	savt = new File()
-	sprint(s,"./results/%s/spike_t.txt",result_folder_name)
+	sprint(s,"spike_t.txt")
 	savt.wopen(s)
 	spike_t.printf(savt,"%.3f\n")
 	savt.close()
 	
 	sav_AP_site = new File()
-	sprint(s,"./results/%s/AP_site.txt",result_folder_name)
+	sprint(s,"AP_site.txt")
 	sav_AP_site.wopen(s)
 	
 	for i=0,AP_x.size()-1 {
