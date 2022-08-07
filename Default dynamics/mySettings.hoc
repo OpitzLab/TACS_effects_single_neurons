@@ -1,5 +1,5 @@
 //Blue Brain cell index   
-my_cell_type = 25   
+my_cell_type = 16   
 plot_neuron = 0   
    
 Synapse_on = 1   
