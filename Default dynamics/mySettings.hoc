@@ -1,5 +1,5 @@
-//strdef result_folder
-//sprint(result_folder, "test") // Results folder name
+//strdef result_folder_name
+//sprint(result_folder_name, "test") // Results folder name
 
 //Blue Brain cell index   
 my_cell_type = 25   
