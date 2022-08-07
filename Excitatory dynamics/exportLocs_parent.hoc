@@ -7,7 +7,7 @@ proc exportLocs(){ localobj savLocs, sref
     neuron_section_size = 0
 
     savLocs = new File()
-	sprint(s,"./results/%s/locs_all.txt",result_folder_name)
+	sprint(s,"locs_all.txt")
 	savLocs.wopen(s)
 
 	forsec cell.all{
@@ -25,7 +25,7 @@ proc exportLocs(){ localobj savLocs, sref
 
 	// soma locs
     savLocs = new File()
-	sprint(s,"./results/%s/locs_somatic.txt",result_folder_name)
+	sprint(s,"locs_somatic.txt")
 	savLocs.wopen(s)
 
 	forsec cell.somatic{
@@ -42,7 +42,7 @@ proc exportLocs(){ localobj savLocs, sref
 
 	// apical locs
     savLocs = new File()
-	sprint(s,"./results/%s/locs_apical.txt",result_folder_name)
+	sprint(s,"locs_apical.txt")
 	savLocs.wopen(s)
 
 	forsec cell.apical{
@@ -59,7 +59,7 @@ proc exportLocs(){ localobj savLocs, sref
 	
 	// basal locs
 	savLocs = new File()
-	sprint(s,"./results/%s/locs_basal.txt",result_folder_name)
+	sprint(s,"locs_basal.txt")
 	savLocs.wopen(s)
 
 	forsec cell.basal{
@@ -76,7 +76,7 @@ proc exportLocs(){ localobj savLocs, sref
 	
 	// axonal locs
     savLocs = new File()
-	sprint(s,"./results/%s/locs_axonal.txt",result_folder_name)
+	sprint(s,"locs_axonal.txt")
 	savLocs.wopen(s)
 
 	forsec cell.axonal{
@@ -90,4 +90,5 @@ proc exportLocs(){ localobj savLocs, sref
 	}
 	
 	savLocs.close()
+    
 }
