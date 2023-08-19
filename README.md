@@ -13,7 +13,7 @@ Assuming NEURON has been installed, the MOD files in the 'mechanisms/' folder ne
 In the main file "init.hoc", do not forget to modify the path of the working directory.
 
 ## Reference
-Please use the following reference: Tran et al. 2020. Effects of transcranial alternating current stimulation on spiking activity in computational models of single neocortical neurons. BioRxiv.
+Please use the following reference: Tran, H., Shirinpour, S., & Opitz, A. (2022). Effects of transcranial alternating current stimulation on spiking activity in computational models of single neocortical neurons. Neuroimage, 250, 118953.
 
 ## License
 The code is licensed with the CC-BY-NC-SA license.
